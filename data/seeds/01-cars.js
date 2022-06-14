@@ -1,4 +1,11 @@
-const cars = [
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> } 
+ */
+
+ exports.seed = async function(knex) {
+    await knex('cars').truncate()
+    await knex('cars').insert([
         {vin: '11111111311111111', 
         make: 'ford',
         model: 'F-150',
@@ -20,10 +27,6 @@ const cars = [
         mileage: 100000
     
     }
-    ]
-
- exports.seed = async function(knex) {
-    await knex('cars').truncate()
-    await knex('cars').insert(cars);
+    ]);
   };
   
