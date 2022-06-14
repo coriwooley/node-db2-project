@@ -1,8 +1,3 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-
 const cars = [
         {vin: '11111111111111111', 
         make: 'ford',
